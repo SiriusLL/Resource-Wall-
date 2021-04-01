@@ -11,15 +11,19 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY NOT NULL,
+  category VARCHAR(255)
+);
+
 CREATE TABLE resources (
   id SERIAL PRIMARY KEY NOT NULL,
   title VARCHAR(255) NOT NULL,
   description VARCHAR(255),
   category VARCHAR(255) NOT NULL,
   resource VARCHAR(255) NOT NULL,
-  rating_id INTEGER REFERENCES ratings(id) ON DELETE CASCADE,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  comment_id INTEGER REFERENCES comments(id) ON DELETE CASCADE
+  category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE
 );
 
 CREATE TABLE comments (
