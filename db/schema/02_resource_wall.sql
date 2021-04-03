@@ -14,9 +14,9 @@ CREATE TABLE users (
 CREATE TABLE resources (
   id SERIAL PRIMARY KEY NOT NULL,
   title VARCHAR(255) NOT NULL,
-  description TEXT,
-  category VARCHAR(255),
-  resource TEXT,
+  description VARCHAR(255),
+  category VARCHAR(255) NOT NULL,
+  resource VARCHAR(255) NOT NULL,
   rating_id INTEGER REFERENCES ratings(id) ON DELETE CASCADE,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   comment_id INTEGER REFERENCES comments(id) ON DELETE CASCADE
@@ -24,7 +24,7 @@ CREATE TABLE resources (
 
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY NOT NULL,
-  text_body TEXT,
+  comment VARCHAR(255),
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   resource_id INTEGER REFERENCES resources(id) ON DELETE CASCADE
 );
