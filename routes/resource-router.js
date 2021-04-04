@@ -8,7 +8,11 @@ const resourceRoutes = (db) => {
     console.log(query);
     db.query(query)
       .then(response => {
+<<<<<<< HEAD
         const resources = response.rows[0];
+=======
+        const resources = response.rows;
+>>>>>>> fbfd03e24c578aa3ca20657097258b29175efcab
         res.json({ resources });
       })
       .catch(err => {
@@ -22,8 +26,13 @@ const resourceRoutes = (db) => {
     let query = `
       SELECT * FROM resources
       WHERE user_id = $1;`;
+<<<<<<< HEAD
     console.log(query, [user_id]);
     db.query(query, user_id)
+=======
+    //console.log(query, [user_id]);
+    db.query(query, [req.params.user_id])
+>>>>>>> fbfd03e24c578aa3ca20657097258b29175efcab
       .then(response => {
         const resources = response.rows[0];
         res.json({ resources });
