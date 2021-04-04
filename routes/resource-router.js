@@ -1,13 +1,14 @@
+const { response } = require('express');
 const express = require('express');
 const router  = express.Router();
 
-module.exports = (db) => {
+const resourceRoutes = (db) => {
   router.get("/", (req, res) => {
     let query = `SELECT * FROM resources`;
     console.log(query);
     db.query(query)
-      .then(data => {
-        const resources = data.rows;
+      .then(response => {
+        const resources = response.rows[0];
         res.json({ resources });
       })
       .catch(err => {
@@ -18,3 +19,5 @@ module.exports = (db) => {
   });
   return router;
 };
+
+module.exports = resourceRoutes;
