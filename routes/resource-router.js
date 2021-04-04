@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const router  = express.Router();
 
@@ -19,5 +20,9 @@ const resourceRoutes = (db) => {
   return router;
 };
 
+<<<<<<< HEAD
 
 module.exports = resourceRoutes
+=======
+module.exports = resourceRoutes;
+>>>>>>> e93cc093cf6e7d86901b0ebf54b19bdfe9a4380f
