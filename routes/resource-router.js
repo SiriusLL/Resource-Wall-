@@ -8,7 +8,7 @@ const resourceRoutes = (db) => {
     console.log(query);
     db.query(query)
       .then(response => {
-        const resources = response.rows[0];
+        const resources = response.rows;
         res.json({ resources });
       })
       .catch(err => {
@@ -22,8 +22,8 @@ const resourceRoutes = (db) => {
     let query = `
       SELECT * FROM resources
       WHERE user_id = $1;`;
-    console.log(query, [user_id]);
-    db.query(query, user_id)
+    //console.log(query, [user_id]);
+    db.query(query, [req.params.user_id])
       .then(response => {
         const resources = response.rows[0];
         res.json({ resources });
