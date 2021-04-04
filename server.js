@@ -58,6 +58,10 @@ app.get("/createresource", (req, res) => {
   res.render("create_resource");
 });
 
+app.get("/myresources", (req, res) => {
+  res.render("my_resources");
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
