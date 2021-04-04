@@ -14,7 +14,9 @@ const morgan     = require('morgan');
 const { Pool } = require('pg');
 const dbParams = require('./lib/db.js');
 const db = new Pool(dbParams);
-db.connect();
+db.connect(() => {
+  console.log('database connected');
+});
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -51,6 +53,15 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get('/login/:userId', (req, res) => {
+  // if using cookie-session middleware
+  req.session.user_id = req.params.userId;
+  // if using plaintext cookies
+  res.cookie('user_id', req.params.userId);
+  // redirect the user somewhere
+  res.redirect('/');
+});
+
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Resource Wall listening on port ${PORT}`);
 });
