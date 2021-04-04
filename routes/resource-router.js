@@ -17,12 +17,19 @@ const resourceRoutes = (db) => {
           .json({ error: err.message });
       });
   });
+
+  router.get("/:user_id", (req, res) => {
+    let query = `
+      SELECT * FROM resources
+      WHERE user_id = $1;`;
+    console.log(query, [user_id]);
+    db.query(query, user_id)
+      .then(response => {
+        const resources = response.rows[0];
+        res.json({ resources });
+      })
+  })
   return router;
 };
 
-<<<<<<< HEAD
-
-module.exports = resourceRoutes
-=======
 module.exports = resourceRoutes;
->>>>>>> e93cc093cf6e7d86901b0ebf54b19bdfe9a4380f
