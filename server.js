@@ -14,7 +14,9 @@ const morgan     = require('morgan');
 const { Pool } = require('pg');
 const dbParams = require('./lib/db.js');
 const db = new Pool(dbParams);
-db.connect();
+db.connect(() => {
+  console.log('database connected');
+});
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -35,9 +37,10 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
-
+const resourceRoutes = require('./routes/resource-router');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
+app.use("/resources", resourceRoutes(db));
 app.use("/api/users", usersRoutes(db));
 app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
@@ -48,6 +51,15 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+app.get('/login/:userId', (req, res) => {
+  // if using cookie-session middleware
+  req.session.user_id = req.params.userId;
+  // if using plaintext cookies
+  res.cookie('user_id', req.params.userId);
+  // redirect the user somewhere
+  res.redirect('/');
 });
 
 app.get("/login", (req, res) => {
@@ -63,5 +75,5 @@ app.get("/myresources", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Th3 Ultra Violet Resource Wall listening on port ${PORT}`);
 });
