@@ -18,3 +18,6 @@ const resourceRoutes = (db) => {
   });
   return router;
 };
+
+
+module.exports = resourceRoutes
