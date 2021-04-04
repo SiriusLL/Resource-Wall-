@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Create New Resource</title>
+
+<!-- input types below must be adjusted -->
+
+</head>
+<body>
+  <header>
+    <%- include('partials/header.ejs') %>
+  </header>
+<form class="my-form" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+<p>
+<label>Title
+<input type="text" name="customer_name" required>
+</label>
+</p>
+
+<p>
+<label>URL
+<input type="email" name="email_address">
+</label>
+</p>
+
+<p>
+<label>Rating
+<select id="rating" name="rating">
+<option value="" selected="selected"></option>
+<option value="website" >1</option>
+<option value="membership" >2</option>
+<option value="telepathy" >3</option>
+<option value="website" >4</option>
+<option value="website" >5</option>
+<option value="website" >6</option>
+<option value="website" >7</option>
+<option value="website" >8</option>
+<option value="website" >9</option>
+<option value="website" >10</option>
+</select>
+</label>
+</p>
+
+<p>
+<label>Description
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+
+<p><button>Submit Enquiry</button></p>
+
+</form>
+
+</body>
+</html>

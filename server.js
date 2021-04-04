@@ -62,6 +62,18 @@ app.get('/login/:userId', (req, res) => {
   res.redirect('/');
 });
 
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/createresource", (req, res) => {
+  res.render("create_resource");
+});
+
+app.get("/myresources", (req, res) => {
+  res.render("my_resources");
+});
+
 app.listen(PORT, () => {
   console.log(`Th3 Ultra Violet Resource Wall listening on port ${PORT}`);
 });

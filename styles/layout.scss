@@ -7,3 +7,96 @@ body {
     color: #244751;
   }
 }
+
+.myForm {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.8em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  }
+
+  .myForm * {
+  box-sizing: border-box;
+  }
+
+  .myForm label {
+  padding: 0;
+  font-weight: bold;
+  }
+
+  .myForm input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.9em;
+  padding: 0.5em;
+  }
+
+  .myForm input[type="email"],
+  .myForm input[type="password"] {
+  width: 12em;
+  }
+
+  .myForm button {
+  padding: 0.7em;
+  border-radius: 0.5em;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  }
+
+  .myForm button:hover {
+  background: #ccc;
+  cursor: pointer;
+  }
+
+  //create_resource styling
+  .my-form {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    width: 30em;
+    padding: 1em;
+    }
+
+    .my-form * {
+    box-sizing: border-box;
+    }
+
+    .my-form label {
+    padding: 0;
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    }
+
+    .my-form input,
+    .my-form select,
+    .my-form textarea {
+    margin-left: 2em;
+    float: right;
+    width: 20em;
+    border: 1px solid #ccc;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.9em;
+    padding: 0.3em;
+    }
+
+    .my-form textarea {
+    height: 100px;
+    }
+
+    .my-form button {
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #eee;
+    border: none;
+    font-weight: bold;
+    margin-left: 14em;
+    margin-top: 1.8em;
+    }
+
+    .my-form button:hover {
+    background: #ccc;
+    cursor: pointer;
+    }
