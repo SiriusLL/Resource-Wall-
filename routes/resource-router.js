@@ -18,17 +18,57 @@ const resourceRoutes = (db) => {
       });
   });
 
-  router.get("/:user_id", (req, res) => {
+  router.get("/myresources", (req, res) => {
+    const cookie = req.cookies.user_id;
+    if (!cookie) {
+      res.redirect('/login');
+      return;
+    }
+
     let query = `
       SELECT * FROM resources
       WHERE user_id = $1;`;
+
+    db.query(query, [req.cookies.user_id])
+      .then(response => {
+        //console.log(response);
+        //const resources = response.rows;
+        //res.json({ resources });
+        console.log(response.rows,
+        'flag')
+        templateVars = { resources: response.rows}
+        res.render('my_resources', templateVars);
+      });
+  });
+  //resources/create-resource ~~ create a resource
+  router.get("/createresource", (req, res) => {
+    const cookie = req.cookies.user_id;
+    if (!cookie) {
+      res.redirect('/login');
+      return;
+    }
+
+    res.render('create_resource');
+  });
+  //
+  router.post("/", (req, res) => {
+    const cookie = req.cookies.user_id;
+    if (!cookie) {
+      res.redirect('/login')
+    }
+    console.log(res.body)
+    let query = `
+      INSERT INTO resources (title, description, category, resource, user_id)
+      VALUES ($1, $2, $3, $4, $5);`;
     //console.log(query, [user_id]);
-    db.query(query, [req.params.user_id])
+    db.query(query, [title, description, category, resource, req.cookies.user_id])
       .then(response => {
         const resources = response.rows[0];
         res.json({ resources });
-      })
-  })
+      });
+  });
+
+
   return router;
 };
 
