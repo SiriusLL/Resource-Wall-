@@ -17,7 +17,8 @@ const resourceRoutes = (db) => {
         res
           .status(500)
           .json({ error: err.message });
-      });
+
+    });
   });
 
   router.get("/myresources", (req, res) => {
