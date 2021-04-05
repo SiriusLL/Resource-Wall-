@@ -17,11 +17,13 @@
     </header>
     <h1>My Resources</h1>
     <% for (resource of resources) { %>
-    <p>test <%=resource.title %></p>
-    <p>test <%=resource.description %></p>
-    <p>test <%=resource.category %></p>
-    <p>test <%=resource.resource %></p>
+      <section class="my-resource-boxes">
+    <p>title <%=resource.title %></p>
+    <p>desc <%=resource.description %></p>
+    <p>cat <%=resource.category %></p>
+    <p>link <%=resource.resource %></p>
     <p></p>
+    </section>
     <% } %>
   </body>
 </html>
