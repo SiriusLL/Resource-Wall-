@@ -9,7 +9,8 @@ const searchRoutes = (db) => {
     let query = `
     SELECT *
     FROM resources
-    WHERE LOWER( category ) LIKE $1;`;
+    WHERE LOWER( category ) LIKE $1
+    OR LOWER( description ) LIKE $1;`;
     console.log('query:',query);
     //console.log(res.body, 'reqBooty@@@@@@@@@@@')
     db.query(query, ['%' + req.body.search.toLowerCase() + '%'])
