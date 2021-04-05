@@ -3,21 +3,23 @@ const express = require('express');
 const router  = express.Router();
 
 const searchRoutes = (db) => {
-  router.get("/", (req, res) => {
-    let query = `
-      SELECT * FROM resources
-      WHERE category LIKE $1
-      OR description LIKE $2;`;
-    console.log(query);
+  router.post("/", (req, res) => {
     console.log(req.body, 'reqBooty@@@@@@@@@@@')
-    db.query(query, [req.body, req.body])
+
+    let query = `
+    SELECT *
+    FROM resources
+    WHERE LOWER( category ) LIKE $1;`;
+    console.log('query:',query);
+    //console.log(res.body, 'reqBooty@@@@@@@@@@@')
+    db.query(query, ['%' + req.body.search.toLowerCase() + '%'])
       .then(response => {
 
-        console.log(response.rows,
-          'flag')
+        console.log(response.rows,'flag')
           templateVars = { resources: response.rows}
           res.render('index', templateVars);
       })
+      .catch(error => {console.log('error:', error)})
 
   });
 
