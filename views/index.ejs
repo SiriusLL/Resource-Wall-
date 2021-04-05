@@ -16,5 +16,14 @@
       <%- include('partials/header.ejs') %>
     </header>
     <h1>Homepage</h1>
+
+      <% for (resource of resources) { %>
+      <p>test <%=resource.title %></p>
+      <p>test <%=resource.description %></p>
+      <p>test <%=resource.category %></p>
+      <p>test <%=resource.resource %></p>
+      <p></p>
+      <% } %>
+
   </body>
 </html>

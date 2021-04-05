@@ -8,8 +8,10 @@ const resourceRoutes = (db) => {
     console.log(query);
     db.query(query)
       .then(response => {
-        const resources = response.rows;
-        res.json({ resources });
+        console.log(response.rows,
+          'flag')
+          templateVars = { resources: response.rows}
+          res.render('index', templateVars);
       })
       .catch(err => {
         res
