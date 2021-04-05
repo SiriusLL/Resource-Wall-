@@ -60,9 +60,9 @@ app.get('/login/:id', (req, res) => {
   res.redirect('/');
 });
 
-// app.get("/login", (req, res) => {
-//   res.render("login");
-// });
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 
 // app.get("/createresource", (req, res) => {
 //   res.render("create_resource");
