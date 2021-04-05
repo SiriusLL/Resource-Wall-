@@ -73,5 +73,5 @@ app.get("/login", (req, res) => {
 // });
 
 app.listen(PORT, () => {
-  console.log(`Th3 Ultra Violet Resource Wall listening on port ${PORT}`);
+  console.log(`The Ultra Violet Resource Wall listening on port ${PORT}`);
 });
