@@ -17,17 +17,23 @@
   <header>
     <%- include('partials/header.ejs') %>
   </header>
-<form class="my-form" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+<form class="my-form" method="post" enctype="application/x-www-form-urlencoded" action="/resources/myresources">
 
 <p>
 <label>Title
-<input type="text" name="customer_name" required>
+<input type="text" name="title" required>
+</label>
+</p>
+
+<p>
+<label>category
+  <input type="text" name="category" required>
 </label>
 </p>
 
 <p>
 <label>URL
-<input type="email" name="email_address">
+<input type="text" name="resource" required>
 </label>
 </p>
 
@@ -35,27 +41,27 @@
 <label>Rating
 <select id="rating" name="rating">
 <option value="" selected="selected"></option>
-<option value="website" >1</option>
-<option value="membership" >2</option>
-<option value="telepathy" >3</option>
-<option value="website" >4</option>
-<option value="website" >5</option>
-<option value="website" >6</option>
-<option value="website" >7</option>
-<option value="website" >8</option>
-<option value="website" >9</option>
-<option value="website" >10</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
 </select>
 </label>
 </p>
 
 <p>
 <label>Description
-<textarea name="comments" maxlength="500"></textarea>
+<textarea name="description" maxlength="140"></textarea>
 </label>
 </p>
 
-<p><button>Submit Enquiry</button></p>
+<p><button type="submit">Submit Resource</button></p>
 
 </form>
 

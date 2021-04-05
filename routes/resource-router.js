@@ -51,17 +51,19 @@ const resourceRoutes = (db) => {
     res.render('create_resource');
   });
   //
-  router.post("/", (req, res) => {
+  router.post("/myresources", (req, res) => {
     const cookie = req.cookies.user_id;
     if (!cookie) {
       res.redirect('/login')
     }
+    console.log(req.body)
     console.log(res.body)
     let query = `
       INSERT INTO resources (title, description, category, resource, user_id)
       VALUES ($1, $2, $3, $4, $5);`;
     //console.log(query, [user_id]);
-    db.query(query, [title, description, category, resource, req.cookies.user_id])
+    const createSubmit = req.body;
+    db.query(query, [createSubmit.title, createSubmit.description, createSubmit.category, createSubmit.resource, req.cookies.user_id])
       .then(response => {
         const resources = response.rows[0];
         res.json({ resources });
