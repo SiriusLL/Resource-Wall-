@@ -4,12 +4,16 @@ body {
   background-color: #EEE;
 
   h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #244751;
+    margin-left: 25px;
   }
 }
 
 .navbar-custom {
   background-color: #7539AB;
+  height: 75px;
 }
 
 .navbar-brand {
@@ -29,6 +33,8 @@ body {
   border-radius: 3px;
   }
 
+
+  // login page styling
   .myForm * {
   box-sizing: border-box;
   }
@@ -64,52 +70,80 @@ body {
   cursor: pointer;
   }
 
-  //create_resource styling
-  .my-form {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 0.8em;
-    width: 30em;
-    padding: 1em;
-    }
 
-    .my-form * {
-    box-sizing: border-box;
-    }
+  //create resource styling
+.create-resource-form {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.8em;
+  width: 30em;
+  padding: 1em;
+  }
 
-    .my-form label {
-    padding: 0;
-    font-weight: bold;
-    text-align: right;
-    display: block;
-    }
+.create-resource-form * {
+  box-sizing: border-box;
+}
 
-    .my-form input,
-    .my-form select,
-    .my-form textarea {
-    margin-left: 2em;
-    float: right;
-    width: 20em;
-    border: 1px solid #ccc;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 0.9em;
-    padding: 0.3em;
-    }
+.create-resource-form label {
+  padding: 0;
+  font-weight: bold;
+  text-align: right;
+  display: block;
+}
 
-    .my-form textarea {
-    height: 100px;
-    }
+.create-resource-form input,
+.create-resource-form select,
+.create-resource-form textarea {
+  margin-left: 2em;
+  float: right;
+  width: 20em;
+  border: 1px solid #ccc;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.9em;
+  padding: 0.3em;
+}
 
-    .my-form button {
-    padding: 1em;
-    border-radius: 0.5em;
-    background: #eee;
-    border: none;
-    font-weight: bold;
-    margin-left: 14em;
-    margin-top: 1.8em;
-    }
+.create-resource-form textarea {
+  height: 100px;
+}
 
-    .my-form button:hover {
-    background: #ccc;
-    cursor: pointer;
-    }
+.create-resource-form button {
+  padding: 1em;
+  border-radius: 0.5em;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  margin-left: 14em;
+  margin-top: 1.8em;
+}
+
+
+// homepage resource styling
+.resource-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: darkgrey solid 5px;
+  padding-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.resource-boxes:hover {
+  box-shadow: 8px 8px #7539AB;
+}
+
+
+//myresources styling
+.my-resource-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: darkgrey solid 5px;
+  padding-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.my-resource-boxes:hover {
+  box-shadow: 8px 8px #7539AB;
+}
