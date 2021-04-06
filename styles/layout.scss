@@ -117,3 +117,23 @@ body {
     }
 
   // homepage styling
+.resource-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: darkgrey solid 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+//myresources styling
+.my-resource-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: darkgrey solid 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
