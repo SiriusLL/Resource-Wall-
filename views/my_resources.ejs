@@ -10,18 +10,31 @@
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
-
   <body>
     <header>
       <%- include('partials/header.ejs') %>
     </header>
     <h1>My Resources</h1>
     <% for (resource of resources) { %>
-    <p>test <%=resource.title %></p>
-    <p>test <%=resource.description %></p>
-    <p>test <%=resource.category %></p>
-    <p>test <%=resource.resource %></p>
-    <p></p>
-    <% } %>
+      <p>test <%=resource.title %></p>
+      <p>test <%=resource.description %></p>
+      <p>test <%=resource.category %></p>
+      <p>test <%=resource.resource %></p>
+      <p></p>
+      <% } %>
+      <section class="resource"
+      <div id="resource-section">
+        <% if (user) { %>
+          <form action="/resource/<%= resource.resource_id %>/comment" method="POST">
+            <div class="bg-dark p-2">
+              <div class="d-flex flex-row align-items-start"><img class="rounded-circle"
+                src="<%= user_id.users_name %> " width='40'><textarea name= "comment_text"
+                class="form-control ml-1 shadow-none textarea"></textarea></div>
+            <div class="mt-2 text-right"><button class="btn btn-primary"
+              type="submit">Post comment</button></div>
+              </div>
+          </form>
+
+      </div>
   </body>
 </html>
