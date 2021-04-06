@@ -16,12 +16,17 @@
     </header>
     <h1>My Resources</h1>
     <% for (resource of resources) { %>
-      <p>test <%=resource.title %></p>
-      <p>test <%=resource.description %></p>
-      <p>test <%=resource.category %></p>
-      <p>test <%=resource.resource %></p>
+      <a href="<%=resource.resource %>">
+        <section class="my-resource-boxes">
+      <p><strong><%=resource.title %></strong></p>
+      <p><%=resource.description %></p>
+      <p>Category: <%=resource.category %></p>
+      <p>Follow: <%=resource.resource %></p>
       <p></p>
+      </section>
+      </a>
       <% } %>
+
       <section class="resource"
       <div id="resource-section">
         <% if (user) { %>
@@ -34,7 +39,7 @@
               type="submit">Post comment</button></div>
               </div>
           </form>
-
       </div>
+    <% } %>
   </body>
 </html>
