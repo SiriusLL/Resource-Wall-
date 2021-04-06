@@ -18,6 +18,7 @@
     <h1>Homepage</h1>
 
       <% for (resource of resources) { %>
+        <a href="<%=resource.resource %>">
         <section class="resource-boxes">
       <p><strong><%=resource.title %></strong></p>
       <p><%=resource.description %></p>
@@ -25,6 +26,7 @@
       <p>Follow: <%=resource.resource %></p>
       <p></p>
     </section>
+    </a>
       <% } %>
   </body>
 </html>
