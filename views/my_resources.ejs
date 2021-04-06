@@ -16,30 +16,17 @@
     </header>
     <h1>My Resources</h1>
     <% for (resource of resources) { %>
-      <a href="<%=resource.resource %>">
-        <section class="my-resource-boxes">
-      <p><strong><%=resource.title %></strong></p>
-      <p><%=resource.description %></p>
-      <p>Category: <%=resource.category %></p>
-      <p>Follow: <%=resource.resource %></p>
+      <section class="my-resource-boxes">
+        <p><strong><%=resource.title %></strong></p>
+        <p><%=resource.description %></p>
+        <p>Category: <%=resource.category %></p>
+        <a href="<%=resource.resource %>">
+        <p>Follow: <%=resource.resource %></p>
+      </a>
       <p></p>
       </section>
-      </a>
       <% } %>
 
-      <section class="resource"
-      <div id="resource-section">
-        <% if (user) { %>
-          <form action="/resource/<%= resource.resource_id %>/comment" method="POST">
-            <div class="bg-dark p-2">
-              <div class="d-flex flex-row align-items-start"><img class="rounded-circle"
-                src="<%= user_id.users_name %> " width='40'><textarea name= "comment_text"
-                class="form-control ml-1 shadow-none textarea"></textarea></div>
-            <div class="mt-2 text-right"><button class="btn btn-primary"
-              type="submit">Post comment</button></div>
-              </div>
-          </form>
-      </div>
-    <% } %>
+
   </body>
 </html>

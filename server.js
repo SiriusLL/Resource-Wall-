@@ -39,10 +39,12 @@ app.use(express.static("public"));
 //const widgetsRoutes = require("./routes/widgets");
 const resourceRoutes = require('./routes/resource-router');
 const searchRoutes = require('./routes/search-router');
+const likeRoutes = require('./routes/likes-router');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/resources", resourceRoutes(db));
-app.use("/search",searchRoutes(db));
+app.use("/resources/search",searchRoutes(db));
+app.use("/resources/likes", likeRoutes(db));
 //app.use("/api/users", usersRoutes(db));
 //app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
