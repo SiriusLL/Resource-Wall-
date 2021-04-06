@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script src="https://kit.fontawesome.com/5747e37874.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -18,15 +19,42 @@
     <h1>Homepage</h1>
 
       <% for (resource of resources) { %>
-        <a href="<%=resource.resource %>">
         <section class="resource-boxes">
-      <p><strong><%=resource.title %></strong></p>
-      <p><%=resource.description %></p>
-      <p>Category: <%=resource.category %></p>
+          <p><strong><%=resource.title %></strong></p>
+          <p><%=resource.description %></p>
+          <p>Category: <%=resource.category %></p>
+          <a href="<%=resource.resource %>">
       <p>Follow: <%=resource.resource %></p>
-      <p></p>
-    </section>
     </a>
+      <p></p>
+      <footer class="display-rating-icons">
+        <div class="resource-rating">
+          <p>rating</p>
+        </div>
+        <div class="like-icons">
+          <form id="like">
+          <input type="hidden" value="<%= resource.id %>">
+          <input type="hidden" value="<%= resource.user_id %>">
+          <i class="far fa-heart" type="submit"></i>
+        </form>
+        </div>
+        <label>Rating
+          <select id="rating" name="rating">
+          <option value="" selected="selected"></option>
+          <option value="1" >1</option>
+          <option value="2" >2</option>
+          <option value="3" >3</option>
+          <option value="4" >4</option>
+          <option value="5" >5</option>
+          <option value="6" >6</option>
+          <option value="7" >7</option>
+          <option value="8" >8</option>
+          <option value="9" >9</option>
+          <option value="10" >10</option>
+          </select>
+          </label>
+      </footer>
+    </section>
       <% } %>
   </body>
 </html>
