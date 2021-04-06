@@ -17,8 +17,7 @@
   <header>
     <%- include('partials/header.ejs') %>
   </header>
-  <h1>Create Resource!</h1>
-<form class="create-resource-form" method="post" enctype="application/x-www-form-urlencoded" action="/resources/myresources">
+<form class="my-form" method="post" enctype="application/x-www-form-urlencoded" action="/resources/myresources">
 
 <p>
 <label>Title
@@ -27,7 +26,7 @@
 </p>
 
 <p>
-<label>Category
+<label>category
   <input type="text" name="category" required>
 </label>
 </p>
