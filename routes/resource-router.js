@@ -14,11 +14,16 @@ const resourceRoutes = (db) => {
           res.render('index', templateVars);
       })
       .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
+        console.log('an error has occurred', err);
+        res.send('oops there is a problem');
+      });
 
-    });
+    //   .catch(err => {
+    //     res
+    //       .status(500)
+    //       .json({ error: err.message });
+
+    // });
   });
 
   router.get("/myresources", (req, res) => {
