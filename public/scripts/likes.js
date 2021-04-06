@@ -21,7 +21,19 @@ $(document).ready(function() {
     console.log(event);
     console.log('something#########')
     event.preventDefault();
-    event.stopPropagation();
+    //event.stopPropagation();
+    const $likeValue = $('#like-button-value');
+    console.log('888888888888888', $likeValue.val('false'))
+    console.log('likesValue', $likeValue.val())
+    // const getLikesValue = () => {
+
+
+    //   if ($likeValue.val() === 'true') {
+    //     return $likeValue.val('false');
+    //   } else {
+    //     return $likeValue.val('true');
+    //   }
+    // };
     // const $characterCount = $(this).find(".counter")
 
     // if ($tweetText.val().length > 140) {
@@ -41,9 +53,11 @@ $(document).ready(function() {
       url: likeUrl,
       method: "POST",
       data: data
-    }).done(function(data) {
+    }).then(function(data) {
       console.log('POST ajax callback called');
       console.log('ajax-data:',data);
+      $("#completed-task")find('.far fa-heart').addClass('.like-color');
+      return $likeValue.val();
     }).catch(error => {
         console.error(error)
     })

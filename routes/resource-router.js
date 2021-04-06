@@ -28,15 +28,15 @@ const resourceRoutes = (db) => {
     }
 
     let query = `
-      SELECT * FROM resources
-      WHERE user_id = $1;`;
+    SELECT * FROM resources
+    WHERE user_id = $1;`;
 
     db.query(query, [req.cookies.user_id])
       .then(response => {
         //console.log(response);
         //const resources = response.rows;
         //res.json({ resources });
-        //console.log(response.rows,'flag')
+        console.log(response,'flag')
         templateVars = { resources: response.rows}
         res.render('my_resources', templateVars);
       });
