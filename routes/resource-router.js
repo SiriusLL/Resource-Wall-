@@ -8,8 +8,7 @@ const resourceRoutes = (db) => {
     console.log(query);
     db.query(query)
       .then(response => {
-        console.log(response.rows,
-          'flag')
+        // console.log(response.rows,'flag')
           templateVars = { resources: response.rows}
           res.render('index', templateVars);
       })
@@ -37,8 +36,7 @@ const resourceRoutes = (db) => {
         //console.log(response);
         //const resources = response.rows;
         //res.json({ resources });
-        console.log(response.rows,
-        'flag')
+        //console.log(response.rows,'flag')
         templateVars = { resources: response.rows}
         res.render('my_resources', templateVars);
       });
@@ -59,8 +57,8 @@ const resourceRoutes = (db) => {
     if (!cookie) {
       res.redirect('/login')
     }
-    console.log(req.body)
-    console.log(res.body)
+    // console.log(req.body)
+    // console.log(res.body)
     let query = `
       INSERT INTO resources (title, description, category, resource, user_id)
       VALUES ($1, $2, $3, $4, $5);`;

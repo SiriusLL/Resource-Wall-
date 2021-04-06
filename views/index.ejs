@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/likes.js"></script>
     <script src="https://kit.fontawesome.com/5747e37874.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,11 +32,15 @@
           <p>rating</p>
         </div>
         <div class="like-icons">
-          <form id="like">
-          <input type="hidden" value="<%= resource.id %>">
-          <input type="hidden" value="<%= resource.user_id %>">
-          <i class="far fa-heart" type="submit"></i>
-        </form>
+          <form class="like">
+            <input type="hidden" name="resource_id" value="<%= resource.id %>">
+            <input type="hidden" name="user_id" value="<%= resource.user_id %>">
+            <input type="hidden" name="liked" value="TRUE">
+            <!-- <i class="far fa-heart" type="submit"></i> -->
+            <button type="submit" id="completed-task">
+              <i class="far fa-heart"></i>
+            </button>
+          </form>
         </div>
         <label>Rating
           <select id="rating" name="rating">
