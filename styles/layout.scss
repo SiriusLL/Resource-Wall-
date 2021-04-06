@@ -4,6 +4,8 @@ body {
   background-color: #EEE;
 
   h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #244751;
     margin-left: 25px;
   }
@@ -68,27 +70,27 @@ body {
   }
 
   //create_resource styling
-  .my-form {
+  .create-resource-form {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 0.8em;
     width: 30em;
     padding: 1em;
     }
 
-    .my-form * {
+    .create-resource-form * {
     box-sizing: border-box;
     }
 
-    .my-form label {
+    .create-resource-form label {
     padding: 0;
     font-weight: bold;
     text-align: right;
     display: block;
     }
 
-    .my-form input,
-    .my-form select,
-    .my-form textarea {
+    .create-resource-form input,
+    .create-resource-form select,
+    .create-resource-form textarea {
     margin-left: 2em;
     float: right;
     width: 20em;
@@ -98,11 +100,11 @@ body {
     padding: 0.3em;
     }
 
-    .my-form textarea {
+    .create-resource-form textarea {
     height: 100px;
     }
 
-    .my-form button {
+    .create-resource-form button {
     padding: 1em;
     border-radius: 0.5em;
     background: #eee;
@@ -112,7 +114,7 @@ body {
     margin-top: 1.8em;
     }
 
-    .my-form button:hover {
+    .create-resource-form button:hover {
     background: #ccc;
     cursor: pointer;
     }
