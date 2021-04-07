@@ -10,6 +10,7 @@ const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
 var cookieParser = require('cookie-parser');
+app.set('view engine', 'ejs');
 // PG database client/connection setup
 const { Pool } = require('pg');
 const dbParams = require('./lib/db.js');
@@ -37,11 +38,13 @@ app.use(express.static("public"));
 // Note: Feel free to replace the example routes below with your own
 //const usersRoutes = require("./routes/users");
 //const widgetsRoutes = require("./routes/widgets");
+const commentRoutes = require('./routes/comment-router');
 const resourceRoutes = require('./routes/resource-router');
 const searchRoutes = require('./routes/search-router');
 const likeRoutes = require('./routes/likes-router');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
+app.use("/resources/comments", commentRoutes(db));
 app.use("/resources", resourceRoutes(db));
 app.use("/resources/search",searchRoutes(db));
 app.use("/resources/likes", likeRoutes(db));
