@@ -21,10 +21,10 @@ $(document).ready(function() {
     console.log(event);
     console.log('something#########')
     event.preventDefault();
-    //event.stopPropagation();
+    event.stopPropagation();
     const $likeValue = $('#like-button-value');
-    console.log('888888888888888', $likeValue.val('false'))
-    console.log('likesValue', $likeValue.val())
+    //console.log('888888888888888', $likeValue.val('false'))
+    //console.log('likesValue', $likeValue.val())
     // const getLikesValue = () => {
 
 
@@ -57,7 +57,8 @@ $(document).ready(function() {
       console.log('POST ajax callback called');
       console.log('ajax-data:',data);
       console.log('this---',$(this))
-      $(this).find(".fa-heart").addClass('like-color');
+      $(this).find(":fa-heart").addClass('like-color');
+      console.log($likeValue,'likevalue**********')
       return $likeValue.val();
     }).catch(error => {
         console.error(error)
