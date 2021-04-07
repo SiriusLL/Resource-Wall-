@@ -50,24 +50,37 @@
             </button>
           </form>
         </div>
-        <label>Rating
+        <form method="POST" action="/resources/ratings">
+          <label>Rating
+        </label>
           <select id="rating" name="rating">
-          <option value="" selected="selected"></option>
-          <option value="1" >1</option>
-          <option value="2" >2</option>
-          <option value="3" >3</option>
-          <option value="4" >4</option>
-          <option value="5" >5</option>
-          <option value="6" >6</option>
-          <option value="7" >7</option>
-          <option value="8" >8</option>
-          <option value="9" >9</option>
-          <option value="10" >10</option>
-        </select>
-            <button class="btn btn-outline-secondary" type="button">
-              <span class="glyphicon glyphicon-align-left">Submit</span>
-           </button>
-          </label>
+            <option value="" selected="selected"></option>
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" >9</option>
+            <option value="10" >10</option>
+          </select>
+          <input type="hidden" name="rate_resource_id" value="<%= resource.id %>"/>
+            <input type="hidden" name="rate_user_id" value="<%= resource.user_id %>"/>
+          <button class="btn btn-outline-secondary" type="submit">
+            <!-- <div></div><h1>hello</h1> -->
+            <span class="glyphicon glyphicon-align-left">Submit</span>
+          </button>
+        </form>
+
+
+
+<button type="submit" class="get-average" data-resource="<%= resource.id %>">button</button>
+<div data-re="<%= resource.id %>" class="average-rating">
+</div>
+
+
       </footer>
     </section>
       <% } %>

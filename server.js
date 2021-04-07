@@ -42,14 +42,14 @@ const commentRoutes = require('./routes/comment-router');
 const resourceRoutes = require('./routes/resource-router');
 const searchRoutes = require('./routes/search-router');
 const likeRoutes = require('./routes/likes-router');
-//const rateRoutes = require('./routes/ratings-router');
+const rateRoutes = require('./routes/ratings-router');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/resources/comments", commentRoutes(db));
 app.use("/resources", resourceRoutes(db));
 app.use("/resources/search",searchRoutes(db));
 app.use("/resources/likes", likeRoutes(db));
-//app.use("/resources/ratings", rateRoutes(db));
+app.use("/resources/ratings", rateRoutes(db));
 //app.use("/api/users", usersRoutes(db));
 //app.use("/api/widgets", widgetsRoutes(db));
 // Note: mount other resources here, using the same pattern above
