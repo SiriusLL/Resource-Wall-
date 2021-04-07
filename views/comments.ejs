@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Comments</title>
+
+</head>
+<body>
+  <header>
+    <%- include('partials/header.ejs') %>
+  </header>
+
+  <!---- change form method? action? ---->
+<!-- <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm"> -->
+
+<div> <label for="<%= 'Comment placeholder' %>"></label>
+  <form action="/resources/comments" method="post">
+    <label>Comments:
+      <textarea name="comments" cols="50" rows="5" maxlength="280"></textarea>
+    </label>
+    <input type="submit" value="Submit comment">
+  </form>
+<p>Previous comments</p>
+
+<% for (comment of comments) { %>
+
+<div><%= comment.comment %></div>
+<% } %>
+</body>
+</html>

@@ -27,7 +27,14 @@
           <a href="<%=resource.resource %>">
       <p>Follow: <%=resource.resource %></p>
     </a>
-      <p></p>
+    <div class="comment-bar">
+    <form class="comments" action="/resources/comments" method="POST">
+      <input type="hidden" name="res_id" value="<%=resource.id%>">
+      <input type="hidden" name="u_id" value="<%=resource.user_id%>">
+    <textarea name="comments" cols="50" rows="5" maxlength="140"></textarea>
+      <input type="submit"value="Comment"> </button>
+    </form>
+  </div>
       <footer class="display-rating-icons">
         <div class="resource-rating">
           <p>rating</p>
