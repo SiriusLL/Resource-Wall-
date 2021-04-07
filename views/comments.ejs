@@ -26,7 +26,11 @@
     </label>
     <input type="submit" value="Submit comment">
   </form>
+<p>Previous comments</p>
 
+<% for (comment of comments) { %>
 
+<div><%= comment.comment %></div>
+<% } %>
 </body>
 </html>
