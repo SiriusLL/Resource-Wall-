@@ -28,15 +28,17 @@ const resourceRoutes = (db) => {
     }
 
     let query = `
-    SELECT * FROM resources
-    WHERE user_id = $1;`;
+    SELECT resources.id, title, description, category, resource, likes.resource_id AS likesId
+    FROM resources
+    LEFT JOIN likes ON resources.id = likes.resource_id
+    WHERE resources.user_id = $1 OR likes.user_id = $2;`;
 
-    db.query(query, [req.cookies.user_id])
+    db.query(query, [cookie, cookie])
       .then(response => {
         //console.log(response);
         //const resources = response.rows;
         //res.json({ resources });
-        console.log(response,'flag')
+        console.log(response.rows,'flag')
         templateVars = { resources: response.rows}
         res.render('my_resources', templateVars);
       });
@@ -67,7 +69,7 @@ const resourceRoutes = (db) => {
     db.query(query, [createSubmit.title, createSubmit.description, createSubmit.category, createSubmit.resource, req.cookies.user_id])
       .then(response => {
         const resources = response.rows[0];
-        res.json({ resources });
+        res.redirect('/resources/myresources');
       });
   });
 

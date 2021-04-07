@@ -56,7 +56,8 @@ $(document).ready(function() {
     }).then(function(data) {
       console.log('POST ajax callback called');
       console.log('ajax-data:',data);
-      $("#completed-task")find('.far fa-heart').addClass('.like-color');
+      console.log('this---',$(this))
+      $(this).find(".fa-heart").addClass('like-color');
       return $likeValue.val();
     }).catch(error => {
         console.error(error)
