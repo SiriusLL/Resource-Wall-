@@ -1,11 +1,8 @@
 const { response } = require('express');
 const express = require('express');
 const router  = express.Router();
-const Hashids = require('hashids/cjs')
-const hashids = new Hashids('', 10)
 
-
-const likeRoutes = (db) => {
+const rateRoutes = (db) => {
 
   router.post("/", (req, res) => {
     const cookie = req.cookies.user_id;
@@ -37,4 +34,4 @@ const likeRoutes = (db) => {
 };
 
 
-module.exports = likeRoutes;
+module.exports = rateRoutes;

@@ -26,6 +26,7 @@
   "devDependencies": {
     "cookie-parser": "^1.4.5",
     "cookie-session": "^1.4.0",
+    "hashids": "^2.2.8",
     "nodemon": "^1.19.1"
   }
 }
