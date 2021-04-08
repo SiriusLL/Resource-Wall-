@@ -21,25 +21,7 @@ const resourceRoutes = (db) => {
     });
   });
 
-  // router.get("/averages", (req, res) => {
-  //   let query = `SELECT avg(rating) as avgRatings
-  //   FROM ratings
-  //   WHERE resource_id = $1`;
-  //   console.log(query);
-  //   console.log(req.body, 'the pirate booty%&@#')
-  //   db.query(query)
-  //     .then(response => {
-  //       // console.log(response.rows,'flag')
-  //         templateVars = { ratings: response.rows[0]}
-  //         res.render('index', templateVars);
-  //     })
-  //     .catch(err => {
-  //       res
-  //         .status(500)
-  //         .json({ error: err.message });
-
-  //   });
-  // });
+ 
 
   router.get("/myresources", (req, res) => {
     const cookie = req.cookies.user_id;
