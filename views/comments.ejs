@@ -20,8 +20,8 @@
 <!-- <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm"> -->
 
 <div> <label for="<%= 'Comment placeholder' %>"></label>
-  <form action="/resources/comments" method="post">
-    <label>Comments:
+  <form class="comments-page-submit-comment" action="/resources/comments" method="post">
+    <label>Add a comment:
       <textarea name="comments" cols="50" rows="5" maxlength="280"></textarea>
     </label>
     <input type="submit" value="Submit comment">
@@ -30,7 +30,7 @@
 
 <% for (comment of comments) { %>
 
-<div><%= comment.comment %></div>
+<div class="comment-box"><%= comment.comment %></div>
 <% } %>
 </body>
 </html>

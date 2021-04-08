@@ -141,6 +141,7 @@ body {
 .resource-boxes:hover {
   box-shadow: 8px 8px #b4aee8;
 }
+
 .display-rating-icons{
   display: flex;
 }
@@ -164,3 +165,26 @@ body {
 .like-color {
   background-color:#7539AB;
 }
+
+
+//comments page styling
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border: #93329e solid 3px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+p {
+  margin-left: 25px;
+}
+.comments-page-submit-comment {
+  display: grid;
+  justify-content: center;
+}
+
