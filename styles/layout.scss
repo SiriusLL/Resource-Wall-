@@ -148,9 +148,34 @@ body {
 .resource-boxes:hover {
   box-shadow: 8px 8px #b4aee8;
 }
-
+.comments {
+  font-family: 'Londrina Solid', cursive;
+}
+.submit-comment {
+  margin-bottom: 20px;
+}
+pre {
+  padding-top: 20px;
+}
+.completed-task {
+  margin-top: 20px;
+}
 .display-rating-icons{
   display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  font-family: 'Londrina Solid', cursive;
+}
+#rating {
+  margin-bottom: 20px;
+}
+.submit-rating {
+  margin-bottom: 20px;
+}
+.get-average {
+  height: 25px;
+  margin-top: 40px;
+  padding-bottom: 25px;
 }
 
 
