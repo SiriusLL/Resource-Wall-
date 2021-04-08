@@ -6,6 +6,7 @@ const resourceRoutes = (db) => {
   router.get("/", (req, res) => {
     let query = `SELECT * FROM resources`;
     console.log(query);
+    console.log(req.body, 'the pirate booty%&@#')
     db.query(query)
       .then(response => {
         // console.log(response.rows,'flag')
@@ -19,6 +20,8 @@ const resourceRoutes = (db) => {
 
     });
   });
+
+ 
 
   router.get("/myresources", (req, res) => {
     const cookie = req.cookies.user_id;
@@ -38,7 +41,7 @@ const resourceRoutes = (db) => {
         //console.log(response);
         //const resources = response.rows;
         //res.json({ resources });
-        console.log(response.rows,'flag')
+        //console.log(response.rows,'flag')
         templateVars = { resources: response.rows}
         res.render('my_resources', templateVars);
       });

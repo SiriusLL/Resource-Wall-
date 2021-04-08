@@ -26,7 +26,7 @@ const likeRoutes = (db) => {
     console.log(conflictor)
     db.query(query, [req.body.resource_id, req.cookies.user_id, req.body.liked, conflictor])
       .then(response => {
-        console.log('response********************',response,'))))')
+        //console.log('response********************',response,'))))')
         const resources = response.rows[0];
         res.json({ resources });
       });
