@@ -82,9 +82,16 @@ body {
 
 
   //create resource styling
+.create-resource-header {
+  font-size: 40px;
+  font-family: 'Londrina Solid', cursive;
+  color: #b4aee8;
+  -webkit-text-stroke: 0.75px #440a67;
+  margin-left: 190px;
+}
 .create-resource-form {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 0.8em;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 1em;
   width: 30em;
   padding: 1em;
   }
