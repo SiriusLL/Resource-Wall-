@@ -29,8 +29,11 @@ $(document).ready(function() {
 
   $(".get-average").click(function() {
     let id = $(this).data('resource');
-    let $appen = $(this).data('re');
+    const that = this;
+    // let $appen = $(this).data('re');
+    // let $avgRate = $(this).siblings(".average-rating").find(".get-average");
     console.log(id);
+    console.log('this', $(this).siblings(".average-rating").find(".get-average"),'this')
     $.ajax({
       url: '/resources/ratings/avg',
       method: 'POST',
@@ -39,8 +42,8 @@ $(document).ready(function() {
       }
     }).then(function(data) {
       let rating = Math.round(data.avgratings * 10) / 10;
-      $(".average-rating").empty();
-      $(".average-rating").append(`<p>Average rating: ${rating}</p>`)
+      $(that).siblings(".average-rating").empty();
+      $(that).siblings(".average-rating").append(`<p>Average rating: ${rating}</p>`)
       // $appen.append(`<p>Average rating: ${rating}</p>`)
     })
   })
