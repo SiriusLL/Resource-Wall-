@@ -14,7 +14,7 @@ body {
 
 //navbar styling
 .navbar-custom {
-  background-color: #7539AB;
+  background-color: #440A67;
   height: 120px;
   width: 100%;
   // position: fixed;
@@ -25,10 +25,14 @@ body {
   font-family: 'Pacifico', cursive;
   font-size: 50px;
   font-weight: 700;
+  margin-left: 10px;
 }
 
 .nav-item {
-  color: #cfc9d1;
+  color: #ffe3fe;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 
@@ -135,7 +139,7 @@ body {
   margin-bottom: 25px;
 }
 .resource-boxes:hover {
-  box-shadow: 8px 8px #7539AB;
+  box-shadow: 8px 8px #b4aee8;
 }
 
 
