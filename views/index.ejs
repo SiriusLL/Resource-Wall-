@@ -17,7 +17,7 @@
     <header>
       <%- include('partials/header.ejs') %>
     </header>
-    <h1>Homepage</h1>
+    <h1></h1>
 
       <% for (resource of resources) { %>
         <section class="resource-boxes">
@@ -37,7 +37,7 @@
   </div>
       <footer class="display-rating-icons">
         <div class="resource-rating">
-          <p>rating</p>
+          <pre>Like: </pre>
         </div>
         <div class="like-icons">
           <form class="like">
@@ -51,7 +51,7 @@
           </form>
         </div>
         <form method="POST" action="/resources/ratings">
-          <label>Rating
+          <label><pre>  Rate:</pre>
         </label>
           <select id="rating" name="rating">
             <option value="" selected="selected"></option>
@@ -76,7 +76,7 @@
 
 
 
-<button type="submit" class="get-average" data-resource="<%= resource.id %>">button</button>
+<button type="submit" class="get-average" data-resource="<%= resource.id %>">See Rating</button>
 <div data-re="<%= resource.id %>" class="average-rating">
 </div>
 
