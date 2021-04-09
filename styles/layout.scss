@@ -17,7 +17,6 @@ body {
   background-color: #440A67;
   height: 120px;
   width: 100%;
-  // position: fixed;
 }
 
 .navbar-brand {
@@ -36,52 +35,7 @@ body {
 }
 
 
-// login page styling
-.myForm {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 0.8em;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  }
-
-  .myForm * {
-  box-sizing: border-box;
-  }
-
-  .myForm label {
-  padding: 0;
-  font-weight: bold;
-  }
-
-  .myForm input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 0.9em;
-  padding: 0.5em;
-  }
-
-  .myForm input[type="email"],
-  .myForm input[type="password"] {
-  width: 12em;
-  }
-
-  .myForm button {
-  padding: 0.7em;
-  border-radius: 0.5em;
-  background: #eee;
-  border: none;
-  font-weight: bold;
-  }
-
-  .myForm button:hover {
-  background: #ccc;
-  cursor: pointer;
-  }
-
-
-  //create resource styling
+//create resource styling
 .create-resource-header {
   font-size: 40px;
   font-family: 'Londrina Solid', cursive;
@@ -157,6 +111,9 @@ body {
 pre {
   padding-top: 20px;
 }
+.rate-text {
+  margin-bottom: -.45rem;;
+}
 .completed-task {
   margin-top: 20px;
 }
@@ -180,6 +137,13 @@ pre {
 
 
 //myresources styling
+.my-resources-header {
+  font-size: 40px;
+  font-family: 'Londrina Solid', cursive;
+  color: #b4aee8;
+  -webkit-text-stroke: 0.75px #440a67;
+  margin-left: 30px;
+}
 .my-resource-boxes {
   display: flex;
   flex-direction: column;
@@ -227,4 +191,49 @@ pre {
   justify-content: center;
   font-family: 'Londrina Solid', cursive;
 }
+
+
+// login page styling
+.myForm {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.8em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  }
+
+  .myForm * {
+  box-sizing: border-box;
+  }
+
+  .myForm label {
+  padding: 0;
+  font-weight: bold;
+  }
+
+  .myForm input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 0.9em;
+  padding: 0.5em;
+  }
+
+  .myForm input[type="email"],
+  .myForm input[type="password"] {
+  width: 12em;
+  }
+
+  .myForm button {
+  padding: 0.7em;
+  border-radius: 0.5em;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  }
+
+  .myForm button:hover {
+  background: #ccc;
+  cursor: pointer;
+  }
 
