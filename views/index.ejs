@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title>Home Page - UltraViolet</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
@@ -17,7 +17,7 @@
     <header>
       <%- include('partials/header.ejs') %>
     </header>
-    <h1>Homepage</h1>
+    <h1></h1>
 
       <% for (resource of resources) { %>
         <section class="resource-boxes">
@@ -32,26 +32,25 @@
       <input type="hidden" name="res_id" value="<%=resource.id%>">
       <input type="hidden" name="u_id" value="<%=resource.user_id%>">
     <textarea name="comments" cols="50" rows="5" maxlength="140"></textarea>
-      <input type="submit"value="Comment"> </button>
+      <input class="submit-comment" type="submit"value="Add Comment"> </button>
     </form>
   </div>
       <footer class="display-rating-icons">
         <div class="resource-rating">
-          <p>rating</p>
+          <pre>Like: </pre>
         </div>
         <div class="like-icons">
           <form class="like">
             <input type="hidden" name="resource_id" value="<%= resource.id %>">
             <input type="hidden" name="user_id" value="<%= resource.user_id %>">
             <input id="like-button-value" type="hidden" name="liked" value="true">
-            <!-- <i class="far fa-heart" type="submit"></i> -->
             <button type="submit" class="completed-task">
               <i class="far fa-heart"></i>
             </button>
           </form>
         </div>
         <form method="POST" action="/resources/ratings">
-          <label>Rating
+          <label><pre class="rate-text">   Rate:</pre>
         </label>
           <select id="rating" name="rating">
             <option value="" selected="selected"></option>
@@ -68,15 +67,14 @@
           </select>
           <input type="hidden" name="rate_resource_id" value="<%= resource.id %>"/>
             <input type="hidden" name="rate_user_id" value="<%= resource.user_id %>"/>
-          <button class="btn btn-outline-secondary" type="submit">
-            <!-- <div></div><h1>hello</h1> -->
+          <button class="submit-rating" type="submit">
             <span class="glyphicon glyphicon-align-left">Submit</span>
           </button>
         </form>
 
 
 
-<button type="submit" class="get-average" data-resource="<%= resource.id %>">button</button>
+<button type="submit" class="get-average" data-resource="<%= resource.id %>">Show Avg Rating</button>
 <div data-re="<%= resource.id %>" class="average-rating">
 </div>
 

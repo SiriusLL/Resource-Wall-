@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Comments</title>
+<title>Comments - UltraViolet</title>
 
 </head>
 <body>
@@ -16,21 +16,20 @@
     <%- include('partials/header.ejs') %>
   </header>
 
-  <!---- change form method? action? ---->
-<!-- <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm"> -->
+
 
 <div> <label for="<%= 'Comment placeholder' %>"></label>
-  <form action="/resources/comments" method="post">
-    <label>Comments:
+  <form class="comments-page-submit-comment" action="/resources/comments" method="post">
+    <label>Add a comment:
       <textarea name="comments" cols="50" rows="5" maxlength="280"></textarea>
     </label>
     <input type="submit" value="Submit comment">
   </form>
-<p>Previous comments</p>
+<p class="resources-comments">Resource's Comments</p>
 
 <% for (comment of comments) { %>
 
-<div><%= comment.comment %></div>
+<div class="comment-box"><%= comment.comment %></div>
 <% } %>
 </body>
 </html>

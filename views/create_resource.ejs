@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Create New Resource</title>
+<title>Create New Resource - UltraViolet</title>
 
 <!-- input types below must be adjusted -->
 
@@ -17,7 +17,7 @@
   <header>
     <%- include('partials/header.ejs') %>
   </header>
-  <h1>Create Resource!</h1>
+  <h1 class="create-resource-header">Create Resource!</h1>
 <form class="create-resource-form" method="post" enctype="application/x-www-form-urlencoded" action="/resources/myresources">
 
 <p>
@@ -34,7 +34,7 @@
 
 <p>
 <label>URL
-<input type="text" name="resource" required>
+<input type="text" name="resource" placeholder="https://" required>
 </label>
 </p>
 
@@ -62,7 +62,7 @@
 </label>
 </p>
 
-<p><button type="submit">Submit Resource</button></p>
+<p><button type="submit">Add Resource</button></p>
 
 </form>
 

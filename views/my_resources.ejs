@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My Resources</title>
+    <title>My Resources - UltraViolet</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
@@ -14,7 +14,7 @@
     <header>
       <%- include('partials/header.ejs') %>
     </header>
-    <h1>My Resources</h1>
+    <h1 class="my-resources-header">My Resources</h1>
     <% for (resource of resources) { %>
       <section class="my-resource-boxes">
         <p><strong><%=resource.title %></strong></p>
