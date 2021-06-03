@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Create New Resource - UltraViolet</title>
+  <head>
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Create New Resource - UltraViolet</title>
 
-<!-- input types below must be adjusted -->
+    <!-- input types below must be adjusted -->
+  </head>
+  <body>
+    <header><%- include('partials/header.ejs') %></header>
+    <h1 class="create-resource-header">Create Resource!</h1>
+    <form
+      class="create-resource-form"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+      action="/resources/myresources"
+    >
+      <p>
+        <label
+          >Title
+          <input type="text" name="title" required />
+        </label>
+      </p>
 
-</head>
-<body>
-  <header>
-    <%- include('partials/header.ejs') %>
-  </header>
-  <h1 class="create-resource-header">Create Resource!</h1>
-<form class="create-resource-form" method="post" enctype="application/x-www-form-urlencoded" action="/resources/myresources">
+      <p>
+        <label
+          >Category
+          <input type="text" name="category" required />
+        </label>
+      </p>
 
-<p>
-<label>Title
-<input type="text" name="title" required>
-</label>
-</p>
+      <p>
+        <label
+          >URL
+          <input type="text" name="resource" placeholder="https://" required />
+        </label>
+      </p>
 
-<p>
-<label>Category
-  <input type="text" name="category" required>
-</label>
-</p>
+      <p>
+        <label
+          >Rating
+          <select id="rating" name="rating">
+            <option value="" selected="selected"></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </label>
+      </p>
 
-<p>
-<label>URL
-<input type="text" name="resource" placeholder="https://" required>
-</label>
-</p>
+      <p>
+        <label
+          >Description
+          <textarea name="description" maxlength="140"></textarea>
+        </label>
+      </p>
 
-<p>
-<label>Rating
-<select id="rating" name="rating">
-<option value="" selected="selected"></option>
-<option value="1" >1</option>
-<option value="2" >2</option>
-<option value="3" >3</option>
-<option value="4" >4</option>
-<option value="5" >5</option>
-<option value="6" >6</option>
-<option value="7" >7</option>
-<option value="8" >8</option>
-<option value="9" >9</option>
-<option value="10" >10</option>
-</select>
-</label>
-</p>
-
-<p>
-<label>Description
-<textarea name="description" maxlength="140"></textarea>
-</label>
-</p>
-
-<p><button type="submit">Add Resource</button></p>
-
-</form>
-
-</body>
+      <p><button type="submit">Add Resource</button></p>
+    </form>
+  </body>
 </html>

@@ -1,7 +1,6 @@
 // const likeUrl = 'http://localhost:8080/resources/ratings'
 
-$(document).ready(function() {
-
+$(document).ready(function () {
   // $(".like").on("submit", function(event) {
   //   console.log(event);
   //   console.log('something#########')
@@ -27,21 +26,21 @@ $(document).ready(function() {
 
   // });
 
-  $(".get-average").click(function() {
-    let id = $(this).data('resource');
-    let $appen = $(this).data('re');
+  $(".get-average").click(function () {
+    let id = $(this).data("resource");
+    let $appen = $(this).data("re");
     console.log(id);
     $.ajax({
-      url: '/resources/ratings/avg',
-      method: 'POST',
+      url: "/resources/ratings/avg",
+      method: "POST",
       data: {
-        id
-      }
-    }).then(function(data) {
+        id,
+      },
+    }).then(function (data) {
       let rating = Math.round(data.avgratings * 10) / 10;
       $(".average-rating").empty();
-      $(".average-rating").append(`<p>Average rating: ${rating}</p>`)
+      $(".average-rating").append(`<p>Average rating: ${rating}</p>`);
       // $appen.append(`<p>Average rating: ${rating}</p>`)
-    })
-  })
+    });
+  });
 });

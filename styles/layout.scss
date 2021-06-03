@@ -11,17 +11,16 @@ body {
   }
 }
 
-
 //navbar styling
 .navbar-custom {
-  background-color: #440A67;
+  background-color: #440a67;
   height: 120px;
   width: 100%;
 }
 
 .navbar-brand {
   color: whitesmoke;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 50px;
   font-weight: 700;
   margin-left: 10px;
@@ -29,26 +28,25 @@ body {
 
 .nav-item {
   color: #b4aee8;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   font-weight: 300;
   font-size: 20px;
 }
 
-
 //create resource styling
 .create-resource-header {
   font-size: 40px;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   color: #b4aee8;
   -webkit-text-stroke: 0.75px #440a67;
   margin-left: 190px;
 }
 .create-resource-form {
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   font-size: 1em;
   width: 30em;
   padding: 1em;
-  }
+}
 
 .create-resource-form * {
   box-sizing: border-box;
@@ -87,7 +85,6 @@ body {
   margin-top: 1.8em;
 }
 
-
 // homepage resource styling
 .resource-boxes {
   display: flex;
@@ -103,7 +100,7 @@ body {
   box-shadow: 8px 8px #b4aee8;
 }
 .comments {
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
 .submit-comment {
   margin-bottom: 20px;
@@ -112,16 +109,16 @@ pre {
   padding-top: 20px;
 }
 .rate-text {
-  margin-bottom: -.45rem;;
+  margin-bottom: -0.45rem;
 }
 .completed-task {
   margin-top: 20px;
 }
-.display-rating-icons{
+.display-rating-icons {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
 #rating {
   margin-bottom: 20px;
@@ -135,11 +132,10 @@ pre {
   padding-bottom: 25px;
 }
 
-
 //myresources styling
 .my-resources-header {
   font-size: 40px;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   color: #b4aee8;
   -webkit-text-stroke: 0.75px #440a67;
   margin-left: 30px;
@@ -159,16 +155,15 @@ pre {
 }
 
 .like-color {
-  background-color:#7539AB;
+  background-color: #7539ab;
 }
-
 
 //comments page styling
 .comment-box {
   display: flex;
   flex-direction: column;
   align-items: left;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   font-size: 20px;
   border: #93329e solid 3px;
   padding-left: 10px;
@@ -181,7 +176,7 @@ pre {
 }
 .resources-comments {
   font-size: 40px;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   color: #b4aee8;
   -webkit-text-stroke: 0.75px #440a67;
   margin-left: 25px;
@@ -189,9 +184,8 @@ pre {
 .comments-page-submit-comment {
   display: grid;
   justify-content: center;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
-
 
 // login page styling
 .myForm {
@@ -200,40 +194,39 @@ pre {
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 3px;
-  }
+}
 
-  .myForm * {
+.myForm * {
   box-sizing: border-box;
-  }
+}
 
-  .myForm label {
+.myForm label {
   padding: 0;
   font-weight: bold;
-  }
+}
 
-  .myForm input {
+.myForm input {
   border: 1px solid #ccc;
   border-radius: 3px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 0.9em;
   padding: 0.5em;
-  }
+}
 
-  .myForm input[type="email"],
-  .myForm input[type="password"] {
+.myForm input[type="email"],
+.myForm input[type="password"] {
   width: 12em;
-  }
+}
 
-  .myForm button {
+.myForm button {
   padding: 0.7em;
   border-radius: 0.5em;
   background: #eee;
   border: none;
   font-weight: bold;
-  }
+}
 
-  .myForm button:hover {
+.myForm button:hover {
   background: #ccc;
   cursor: pointer;
-  }
-
+}
